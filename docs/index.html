@@ -2,105 +2,71 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Free MT5 Starter Kit — Beginner Guide</title>
+<title>Rapid Alpha MT5 Starter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #0f172a;
+  background: #020617;
   color: #e5e7eb;
+  line-height: 1.6;
 }
+
 .container {
-  max-width: 920px;
+  max-width: 900px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  text-align: center;
 }
-h1, h2 {
-  color: #f8fafc;
+
+h1 {
+  font-size: 34px;
+  color: #22c55e;
+  margin-bottom: 10px;
 }
+
+.subtitle {
+  font-size: 18px;
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
 .card {
   background: #020617;
   border: 1px solid #1f2937;
-  border-radius: 12px;
-  padding: 24px;
-  margin: 20px 0;
+  border-radius: 14px;
+  padding: 28px;
+  margin: 22px 0;
+  text-align: left;
 }
-ul {
-  padding-left: 20px;
-  line-height: 1.7;
-}
-input, button {
-  font-size: 16px;
-}
-input {
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  background: #111827;
-  color: #e5e7eb;
-  width: 100%;
-  box-sizing: border-box;
-}
-button {
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: none;
-  background: #22c55e;
-  color: #052e16;
-  font-weight: bold;
-  cursor: pointer;
-}
-button:hover {
-  background: #16a34a;
-}
+
 .btn {
   display: inline-block;
-  padding: 14px 22px;
+  padding: 16px 24px;
   background: #22c55e;
   color: #052e16;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
-  margin-top: 12px;
-  margin-right: 10px;
+  margin: 10px 8px 0 0;
 }
-.notice {
-  font-size: 14px;
-  color: #94a3b8;
-  margin-top: 10px;
+
+.btn:hover {
+  background: #16a34a;
 }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #22c55e;
+  color: #22c55e;
+}
+
 footer {
   margin-top: 40px;
   font-size: 14px;
-  color: #94a3b8;
-}
-
-/* Sticky Email Bar */
-#stickyBar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #22c55e;
-  color: #052e16;
-  text-align: center;
-  padding: 12px 10px;
-  font-weight: bold;
-  z-index: 9999;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-#stickyBar input {
-  flex: 1 1 200px;
-  min-width: 180px;
-}
-#stickyBar a, #stickyBar button {
-  margin: 0;
+  color: #64748b;
 }
 </style>
 </head>
@@ -109,68 +75,49 @@ footer {
 
 <div class="container">
 
-<h1>Free MT5 Beginner Starter Kit</h1>
-<p>Step-by-step setup, broker checklist, and first-trade safety guide for new traders.</p>
+<h1>Rapid Alpha MT5 Starter</h1>
+<p class="subtitle">
+Edgy trading setup guide • Platform install • Broker selection • First demo trade
+</p>
 
 <div class="card">
-<h2>What You Get Inside</h2>
+<h2>Start Here</h2>
+<p>
+Open the full MT5 starter guide and walk step-by-step from zero setup
+to your first structured demo trade.
+</p>
+
+<a href="starterkit.html" class="btn">Open Starter Kit</a>
+<a href="dashboard.html" class="btn btn-outline">Client Dashboard</a>
+</div>
+
+<div class="card">
+<h2>Setup Flow</h2>
 <ul>
-<li>MT5 install checklist</li>
-<li>Broker selection guide</li>
-<li>Risk per trade formula</li>
-<li>Position sizing basics</li>
-<li>First trade checklist</li>
-<li>Beginner mistakes to avoid</li>
+<li>Choose a supported broker</li>
+<li>Install MT5 platform</li>
+<li>Login with demo account</li>
+<li>Learn chart + order basics</li>
+<li>Place your first controlled trade</li>
 </ul>
+
+<a href="broker.html" class="btn">Broker Guide</a>
+<a href="install.html" class="btn btn-outline">Install Guide</a>
 </div>
 
 <div class="card">
-<h2>Next Steps</h2>
-<a href="broker.html" class="btn">Choose a Broker</a>
-<a href="install.html" class="btn">Install & First Trade Guide</a>
-</div>
-
-<div class="card">
-<strong>Important:</strong> Educational content only. Trading involves risk. Always practice on demo first.
+<h2>Important Risk Note</h2>
+<p>
+This project is educational. Always use demo first. Never risk money
+you can’t afford to lose. Discipline beats hype.
+</p>
 </div>
 
 <footer>
-© MT5 Starter Hub — Beginner Education Project
+Educational Only — Not Financial Advice
 </footer>
 
 </div>
-
-<!-- Sticky Email Capture Bar -->
-<div id="stickyBar">
-  <span>Get your MT5 Starter Kit PDF</span>
-  <input type="email" id="stickyEmail" placeholder="Enter your email">
-  <button id="stickySubmit">Send & Download</button>
-</div>
-
-<script>
-document.getElementById('stickySubmit').addEventListener('click', function(){
-  const emailInput = document.getElementById('stickyEmail');
-  const email = emailInput.value.trim();
-  if(!email){
-    alert('Please enter your email.');
-    return;
-  }
-  const formData = new FormData();
-  formData.append('email', email);
-
-  fetch('https://formspree.io/f/xbdagabb', {
-    method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    alert('Email submitted! Your download will start now.');
-    window.open('starterkit.pdf', '_blank');
-    emailInput.value = '';
-  }).catch(err => {
-    alert('Oops! Something went wrong. Try again.');
-  });
-});
-</script>
 
 </body>
 </html>

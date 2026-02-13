@@ -12,17 +12,14 @@ body {
   background: #0f172a;
   color: #e5e7eb;
 }
-
 .container {
   max-width: 920px;
   margin: auto;
   padding: 40px 20px;
 }
-
 h1, h2 {
   color: #f8fafc;
 }
-
 .card {
   background: #020617;
   border: 1px solid #1f2937;
@@ -30,12 +27,10 @@ h1, h2 {
   padding: 24px;
   margin: 20px 0;
 }
-
 ul {
   padding-left: 20px;
   line-height: 1.7;
 }
-
 input, button {
   width: 100%;
   padding: 14px;
@@ -44,23 +39,19 @@ input, button {
   border: none;
   font-size: 16px;
 }
-
 input {
   background: #111827;
   color: #e5e7eb;
 }
-
 button {
   background: #22c55e;
   color: #052e16;
   font-weight: bold;
   cursor: pointer;
 }
-
 button:hover {
   background: #16a34a;
 }
-
 .btn {
   display: inline-block;
   padding: 14px 22px;
@@ -72,22 +63,11 @@ button:hover {
   margin-top: 12px;
   margin-right: 10px;
 }
-
-.btn:hover {
-  background: #16a34a;
-}
-
-#downloadBox {
-  display: none;
-  text-align: center;
-}
-
 .notice {
   font-size: 14px;
   color: #94a3b8;
   margin-top: 10px;
 }
-
 footer {
   margin-top: 40px;
   font-size: 14px;
@@ -118,22 +98,12 @@ footer {
 <div class="card">
 <h2>Get Instant Access</h2>
 
-<form action="https://formspree.io/f/xbdagabb" method="POST" onsubmit="showDownload()">
-
-<input type="email" name="email" placeholder="Enter your email address" required>
-
-<button type="submit">Send Me The Starter Kit</button>
-
+<form id="mt5Form">
+  <input type="email" name="email" placeholder="Enter your email address" required>
+  <button type="submit">Send Me The Starter Kit</button>
 </form>
 
 <p class="notice">We only use your email to send the guide. No spam.</p>
-
-<div id="downloadBox">
-  <h2>Download Ready</h2>
-  <a href="starterkit.pdf" class="btn" target="_blank">
-    Download Starter Kit PDF
-  </a>
-</div>
 
 </div>
 
@@ -154,11 +124,18 @@ footer {
 </div>
 
 <script>
-function showDownload(){
-  setTimeout(function(){
-    document.getElementById("downloadBox").style.display="block";
-  }, 1200);
-}
+document.getElementById('mt5Form').addEventListener('submit', function(e){
+  e.preventDefault();
+  const form = e.target;
+  fetch('https://formspree.io/f/xbdagabb', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    // Redirect to thank-you page after submission
+    window.location.href = 'thankyou.html';
+  });
+});
 </script>
 
 </body>

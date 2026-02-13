@@ -1,112 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MT5 Beginner Starter Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h1, h2 {
-      color: #f8fafc;
-    }
-    .card {
-      background: #020617;
-      border: 1px solid #1f2937;
-      border-radius: 12px;
-      padding: 24px;
-      margin: 20px 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      background: #22c55e;
-      color: #052e16;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: 10px;
-      margin-right: 10px;
-    }
-    .btn:hover {
-      background: #16a34a;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Free MT5 Starter Kit — Beginner Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 920px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1, h2 {
+  color: #f8fafc;
+}
+
+.card {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+}
+
+ul {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+input, button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+input {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+button {
+  background: #22c55e;
+  color: #052e16;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16a34a;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #22c55e;
+  color: #052e16;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background: #16a34a;
+}
+
+#downloadBox {
+  display: none;
+  text-align: center;
+}
+
+.notice {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
 
-  <h1>MT5 Beginner Starter Hub</h1>
-  <p>Everything you need to start trading with MT5 — platform setup, broker selection, and first trade basics.</p>
+<h1>Free MT5 Beginner Starter Kit</h1>
+<p>Step-by-step setup, broker checklist, and first-trade safety guide for new traders.</p>
 
-  <div class="card">
-    <strong>New to trading?</strong>
-    <p>This starter hub walks you through the exact beginner path — no hype, no guesswork.</p>
-  </div>
+<div class="card">
+<h2>What You Get Inside</h2>
+<ul>
+<li>MT5 install checklist</li>
+<li>Broker selection guide</li>
+<li>Risk per trade formula</li>
+<li>Position sizing basics</li>
+<li>First trade checklist</li>
+<li>Beginner mistakes to avoid</li>
+</ul>
+</div>
 
-  <div class="card">
-    <h2>Start Here</h2>
-    <a href="broker.html" class="btn">Choose a Broker</a>
-    <a href="install.html" class="btn">Install & First Trade Guide</a>
-  </div>
+<div class="card">
+<h2>Get Instant Access</h2>
 
-  <div class="card">
-    <h2>Download Free MT5 Starter Kit (PDF)</h2>
-    <ul>
-      <li>Quick setup checklist</li>
-      <li>Risk per trade guide</li>
-      <li>Position sizing basics</li>
-      <li>First trade checklist</li>
-      <li>MT5 shortcuts</li>
-    </ul>
-    <a href="starterkit.pdf" class="btn" target="_blank">Download PDF</a>
-  </div>
+<form action="https://formspree.io/f/xbdagabb" method="POST" onsubmit="showDownload()">
 
-  <div class="card">
-    <h2>Who This Is For</h2>
-    <ul>
-      <li>Complete beginners</li>
-      <li>Small account starters</li>
-      <li>Demo traders going live</li>
-      <li>Self-learners who want structure</li>
-    </ul>
-  </div>
+<input type="email" name="email" placeholder="Enter your email address" required>
 
-  <div class="card">
-    <h2>Get Direct Help</h2>
-    <p>Need help setting up MT5 and placing your first trade?</p>
-    <a href="https://t.me/YOURUSERNAME" class="btn">Chat on Telegram</a>
-    <a href="mailto:YOUREMAIL@example.com" class="btn">Email Me</a>
-  </div>
+<button type="submit">Send Me The Starter Kit</button>
 
-  <div class="card">
-    <p><strong>Note:</strong> Educational content only — not financial advice. Always test on demo first.</p>
-  </div>
+</form>
 
-  <footer>
-    Trading involves risk. Never trade money you cannot afford to lose.
-  </footer>
+<p class="notice">We only use your email to send the guide. No spam.</p>
+
+<div id="downloadBox">
+  <h2>Download Ready</h2>
+  <a href="starterkit.pdf" class="btn" target="_blank">
+    Download Starter Kit PDF
+  </a>
+</div>
 
 </div>
+
+<div class="card">
+<h2>Next Steps</h2>
+<a href="broker.html" class="btn">Choose a Broker</a>
+<a href="install.html" class="btn">Install & First Trade Guide</a>
+</div>
+
+<div class="card">
+<strong>Important:</strong> Educational content only. Trading involves risk. Always practice on demo first.
+</div>
+
+<footer>
+© MT5 Starter Hub — Beginner Education Project
+</footer>
+
+</div>
+
+<script>
+function showDownload(){
+  setTimeout(function(){
+    document.getElementById("downloadBox").style.display="block";
+  }, 1200);
+}
+</script>
 
 </body>
 </html>

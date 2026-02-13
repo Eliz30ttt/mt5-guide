@@ -1,122 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Choose an MT5 Broker</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h1, h2 {
-      color: #f8fafc;
-    }
-    .card {
-      background: #020617;
-      border: 1px solid #1f2937;
-      border-radius: 12px;
-      padding: 24px;
-      margin: 20px 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      background: #22c55e;
-      color: #052e16;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: 10px;
-      margin-right: 10px;
-    }
-    .btn:hover {
-      background: #16a34a;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .warn {
-      background: #3f1d1d;
-      border: 1px solid #7f1d1d;
-      border-radius: 10px;
-      padding: 16px;
-      margin-top: 20px;
-      color: #fecaca;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Choose an MT5 Broker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { font-family: Arial, sans-serif; margin:0; background:#0f172a; color:#e5e7eb; line-height:1.6; }
+.container { max-width:900px; margin:auto; padding:40px 20px; }
+h1,h2,h3 { color:#f8fafc; }
+.card { background:#020617; border:1px solid #1f2937; border-radius:12px; padding:24px; margin:20px 0; }
+ul { padding-left:20px; }
+.btn { display:inline-block; padding:14px 22px; background:#22c55e; color:#052e16; text-decoration:none; border-radius:8px; font-weight:bold; margin-top:10px; margin-right:10px; }
+.btn:hover { background:#16a34a; }
+footer { margin-top:40px; font-size:14px; color:#94a3b8; }
+#stickyBar { position:fixed; bottom:0; left:0; width:100%; background:#22c55e; color:#052e16; text-align:center; padding:12px 10px; font-weight:bold; z-index:9999; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:10px; }
+#stickyBar input { flex:1 1 200px; min-width:180px; padding:8px 12px; border:none; border-radius:6px; }
+#stickyBar button { padding:8px 16px; border:none; border-radius:6px; background:#052e16; color:#22c55e; font-weight:bold; cursor:pointer; }
+</style>
 </head>
 <body>
 
 <div class="container">
+<h1>Choose the Right MT5 Broker</h1>
+<p>Your broker connects you to the market. Pick one with low fees, fast execution, and MT5 support.</p>
 
-  <h1>Choose the Right MT5 Broker</h1>
-  <p>Your broker connects you to the market. Pick one with low fees, fast execution, and MT5 support.</p>
-
-  <div class="card">
-    <h2>What To Look For</h2>
-    <ul>
-      <li>Supports MetaTrader 5 (MT5)</li>
-      <li>Low spreads & commissions</li>
-      <li>Fast withdrawals</li>
-      <li>Regulation & reputation</li>
-      <li>Demo account available</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Beginner-Friendly MT5 Brokers</h2>
-
-    <h3>Option 1 — Low Deposit</h3>
-    <p>Good for small accounts and beginners testing live trading.</p>
-    <a href="#" class="btn">Open Broker Account</a>
-
-    <h3>Option 2 — Tight Spreads</h3>
-    <p>Better for active traders and scalpers.</p>
-    <a href="#" class="btn">Open Broker Account</a>
-
-    <h3>Option 3 — Global Access</h3>
-    <p>Wide instrument selection (forex, indices, metals, oil).</p>
-    <a href="#" class="btn">Open Broker Account</a>
-
-    <p><em>You can replace these buttons with your referral links later.</em></p>
-  </div>
-
-  <div class="card">
-    <h2>After You Open Your Broker Account</h2>
-    <ul>
-      <li>Download MT5 platform</li>
-      <li>Login with broker credentials</li>
-      <li>Start on demo first</li>
-      <li>Place your first test trade</li>
-    </ul>
-
-    <a href="install.html" class="btn">Go To Install Guide</a>
-    <a href="index.html" class="btn">Back to Home</a>
-  </div>
-
-  <div class="warn">
-    Never deposit money you cannot afford to lose. Always test strategies on demo first.
-  </div>
-
-  <footer>
-    Educational content only — not financial advice.
-  </footer>
-
+<div class="card">
+<h2>What To Look For</h2>
+<ul>
+<li>Supports MetaTrader 5 (MT5)</li>
+<li>Low spreads & commissions</li>
+<li>Fast withdrawals</li>
+<li>Regulation & reputation</li>
+<li>Demo account available</li>
+</ul>
 </div>
+
+<div class="card">
+<h2>Beginner-Friendly MT5 Brokers</h2>
+<h3>Option 1 — Low Deposit</h3>
+<p>Good for small accounts and beginners testing live trading.</p>
+<a href="#" class="btn">Open Broker Account</a>
+
+<h3>Option 2 — Tight Spreads</h3>
+<p>Better for active traders and scalpers.</p>
+<a href="#" class="btn">Open Broker Account</a>
+
+<h3>Option 3 — Global Access</h3>
+<p>Wide instrument selection (forex, indices, metals, oil).</p>
+<a href="#" class="btn">Open Broker Account</a>
+</div>
+
+<div class="card">
+<h2>After You Open Your Broker Account</h2>
+<ul>
+<li>Download MT5 platform</li>
+<li>Login with broker credentials</li>
+<li>Start on demo first</li>
+<li>Place your first test trade</li>
+</ul>
+<a href="install.html" class="btn">Go To Install Guide</a>
+<a href="index.html" class="btn">Back to Home</a>
+</div>
+
+<footer>Educational content only — not financial advice.</footer>
+</div>
+
+<!-- Sticky Email Capture Bar -->
+<div id="stickyBar">
+  <span>Get your MT5 Starter Kit PDF</span>
+  <input type="email" id="stickyEmail" placeholder="Enter your email">
+  <button id="stickySubmit">Send & Download</button>
+</div>
+
+<script>
+document.getElementById('stickySubmit').addEventListener('click', function(){
+  const emailInput = document.getElementById('stickyEmail');
+  const email = emailInput.value.trim();
+  if(!email){ alert('Please enter your email.'); return; }
+  const formData = new FormData();
+  formData.append('email', email);
+  fetch('https://formspree.io/f/xbdagabb', { method:'POST', body:formData, headers:{'Accept':'application/json'} })
+  .then(response=>{ alert('Email submitted! Your download will start now.'); window.open('starterkit.pdf','_blank'); emailInput.value=''; })
+  .catch(err=>{ alert('Oops! Something went wrong. Try again.'); });
+});
+</script>
 
 </body>
 </html>

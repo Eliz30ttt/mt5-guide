@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MT5 Client Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+h1, h2 {
+  color: #22c55e;
+}
+.card {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #22c55e;
+  color: #052e16;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.btn:hover {
+  background: #16a34a;
+}
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #94a3b8;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1 id="welcomeMessage">Welcome to Your MT5 Dashboard</h1>
+<p>Here you can access your starter kit and all guides to get started with trading on MT5.</p>
+
+<div class="card">
+<h2>Your Starter Kit</h2>
+<p>Download your PDF guide to setup MT5, select brokers, and make your first demo trade.</p>
+<a href="starterkit.pdf" class="btn" target="_blank">Download Starter Kit</a>
+</div>
+
+<div class="card">
+<h2>Next Steps</h2>
+<ul>
+<li><a href="broker.html" class="btn">Broker Guide</a></li>
+<li><a href="install.html" class="btn">Install & First Trade Guide</a></li>
+<li><a href="index.html" class="btn">Back to Landing Page</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Account Overview</h2>
+<p id="accountNote">Your account is ready. Remember to practice on a demo account before trading live.</p>
+</div>
+
+<footer>
+© MT5 Starter Hub — Client Dashboard | Educational content only
+</footer>
+
+</div>
+
+<script>
+// Function to read query string and get 'name' parameter
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+// Personalize welcome message
+const userName = getQueryParam('name');
+if(userName){
+  document.getElementById('welcomeMessage').textContent = `Welcome, ${decodeURIComponent(userName)}!`;
+  document.getElementById('accountNote').textContent = `Hello ${decodeURIComponent(userName)}, your account is ready. Remember to practice on a demo account before trading live.`;
+}
+</script>
+
+</body>
+</html>

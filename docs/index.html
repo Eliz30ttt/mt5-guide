@@ -32,18 +32,21 @@ ul {
   line-height: 1.7;
 }
 input, button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 12px;
-  border-radius: 8px;
-  border: none;
   font-size: 16px;
 }
 input {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
   background: #111827;
   color: #e5e7eb;
+  width: 100%;
+  box-sizing: border-box;
 }
 button {
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
   background: #22c55e;
   color: #052e16;
   font-weight: bold;
@@ -73,6 +76,32 @@ footer {
   font-size: 14px;
   color: #94a3b8;
 }
+
+/* Sticky Email Bar */
+#stickyBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #22c55e;
+  color: #052e16;
+  text-align: center;
+  padding: 12px 10px;
+  font-weight: bold;
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#stickyBar input {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+#stickyBar a, #stickyBar button {
+  margin: 0;
+}
 </style>
 </head>
 
@@ -96,18 +125,6 @@ footer {
 </div>
 
 <div class="card">
-<h2>Get Instant Access</h2>
-
-<form id="mt5Form">
-  <input type="email" name="email" placeholder="Enter your email address" required>
-  <button type="submit">Send Me The Starter Kit</button>
-</form>
-
-<p class="notice">We only use your email to send the guide. No spam.</p>
-
-</div>
-
-<div class="card">
 <h2>Next Steps</h2>
 <a href="broker.html" class="btn">Choose a Broker</a>
 <a href="install.html" class="btn">Install & First Trade Guide</a>
@@ -123,17 +140,34 @@ footer {
 
 </div>
 
+<!-- Sticky Email Capture Bar -->
+<div id="stickyBar">
+  <span>Get your MT5 Starter Kit PDF</span>
+  <input type="email" id="stickyEmail" placeholder="Enter your email">
+  <button id="stickySubmit">Send & Download</button>
+</div>
+
 <script>
-document.getElementById('mt5Form').addEventListener('submit', function(e){
-  e.preventDefault();
-  const form = e.target;
+document.getElementById('stickySubmit').addEventListener('click', function(){
+  const emailInput = document.getElementById('stickyEmail');
+  const email = emailInput.value.trim();
+  if(!email){
+    alert('Please enter your email.');
+    return;
+  }
+  const formData = new FormData();
+  formData.append('email', email);
+
   fetch('https://formspree.io/f/xbdagabb', {
     method: 'POST',
-    body: new FormData(form),
+    body: formData,
     headers: { 'Accept': 'application/json' }
   }).then(response => {
-    // Redirect to thank-you page after submission
-    window.location.href = 'thankyou.html';
+    alert('Email submitted! Your download will start now.');
+    window.open('starterkit.pdf', '_blank');
+    emailInput.value = '';
+  }).catch(err => {
+    alert('Oops! Something went wrong. Try again.');
   });
 });
 </script>
